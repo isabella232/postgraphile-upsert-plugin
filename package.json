@@ -1,7 +1,7 @@
 {
   "name": "@fullstackio/postgraphile-upsert-plugin",
   "description": "add postgres upsert mutations to postgraphile",
-  "version": "1.4.0",
+  "version": "1.4.0-swoop001",
   "main": "build/postgraphile-upsert.js",
   "files": [
     "build/*.js",
@@ -39,7 +39,8 @@
     "format": "prettier-standard '{src,test,scripts}/**/*.{js,jsx,ts,tsx}'",
     "test": "npm run build run-tests",
     "run-tests": "ava build/**/*.test.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "postinstall": "yarn build"
   },
   "husky": {
     "hooks": {
