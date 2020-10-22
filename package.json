@@ -1,5 +1,5 @@
 {
-  "name": "@fullstackio/postgraphile-upsert-plugin",
+  "name": "postgraphile-upsert-plugin",
   "description": "add postgres upsert mutations to postgraphile",
   "version": "1.4.0-swoop001",
   "main": "build/postgraphile-upsert.js",
