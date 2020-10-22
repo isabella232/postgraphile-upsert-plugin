@@ -36,9 +36,9 @@ const PgMutationUpsertPlugin: Plugin = builder => {
       fields,
       pgIntrospectionResultsByKind.class
         .filter((table: any) => !!table.namespace)
-        .filter((table: any) => table.isSelectable)
-        .filter((table: any) => table.isInsertable)
-        .filter((table: any) => table.isUpdatable)
+        .filter((table: any) => table.isSelectable && !omit(table, 'read'))
+        .filter((table: any) => table.isInsertable && !omit(table, 'create'))
+        .filter((table: any) => table.isUpdatable && !omit(table, 'update'))
         .reduce((memo: any, table: any) => {
           const Table = pgGetGqlTypeByTypeIdAndModifier(table.type.id, null)
           if (!Table) return memo
