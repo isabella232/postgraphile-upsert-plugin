@@ -40,7 +40,7 @@
     "test": "npm run build run-tests",
     "run-tests": "ava build/**/*.test.js",
     "semantic-release": "semantic-release",
-    "postinstall": "yarn build"
+    "postinstall": "yarn build --build tsconfig.postinstall.json"
   },
   "husky": {
     "hooks": {
